@@ -1,3 +1,29 @@
-Project notes here
+This purpose of this simple application is to demonstate Java Server Page's (JSP) support for internationalization.
+
+JSP accomplishes this through the "fmt" tag library, and resource language bundle files. For an example of how the "fmt" tag library is used, see the index.jsp file included with this demo.  The language bundle files contain propeties definitions for a specific language.  These files are maintained in a resources director that gets packaged in the .war file for a Java web application.  There should be a separate file for each language that a Java web application needs to support.  Also, each of these properties files should contain a complete set of all the properties used by the application, and each property should have an appropriate utf8 translation for each property in the language the properties file is named for.
+
+All of these properties files should have the same root file name.  For example: OrderResources.properties could be usd for a root filename, and this would contain the default language properties for the application.  All other language properties file would need to have a language suffix added for the language translations they include.  For example, the Germain properties file would be named OrderResources_de_DE.properties, and the French language file would be named OrderResources_fr_FR.properties.
+
+
+
+Project notes
+
+This application has a maven build, and requires Apache Maven 3.0.4 or greater.
+
+To build the war file, make sure the maven bin directory in on the PATH, and type:
+
+    mvn clean install
+
+
+Then deploy the application to Wildfly in ${WILDFLY_HOME}/standalone/deployments
+
+Open the default page at http://localhost:8080/locale-pop/ and press the "Open dialog" button.  This will display some English language text from the default language bundle file OrderResources.properties.  To see this text in a different language, open a new browser and change desired language in your browsers language settings. In FireFox, this can be done in Tools/Options/Content/Languages/Choose.  On the Languages popup, remove English/United States, and add German/Germany or France/French.  Then enter http://localhost:8080/locale-pop/ into your browser address bar and hit return.  This should display the page in the selected language.  If the language does not switch, check you've removed English from your browsers language settings, and that you have set either German/Germany or French/France as your desired language.  It may also help to dump your browser cache for the previous hour.
+
+
+
+
+
+
+
 
 
