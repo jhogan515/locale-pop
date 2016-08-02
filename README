@@ -8,7 +8,7 @@ All of these properties files should have the same root file name.  For example:
 
 Project notes
 
-This application has a maven build, and requires Apache Maven 3.0.4 or greater.
+This application has a maven build, and requires Apache Maven 3.0.4 or greater.  Downloads available at: https://maven.apache.org/download.cgi.
 
 To build the war file, make sure the maven bin directory in on the PATH, and type:
 
