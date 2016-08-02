@@ -1,4 +1,4 @@
-This purpose of this simple application is to demonstate Java Server Page's (JSP) support for internationalization.
+The purpose of this simple application is to demonstate Java Server Page's (JSP) support for internationalization.
 
 JSP accomplishes this through the "fmt" tag library, and resource language bundle files. For an example of how the "fmt" tag library is used, see the index.jsp file included with this demo.  The language bundle files contain propeties definitions for a specific language.  These files are maintained in a resources directory that gets packaged in the .war file for a Java web application.  There should be a separate file for each language that a Java web application needs to support.  Also, each of these properties files should contain a complete set of all the properties used by the application, and each property should have an appropriate utf8 translation for each property in the language the properties file is named for.
 
